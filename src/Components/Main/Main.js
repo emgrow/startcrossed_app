@@ -5,7 +5,7 @@ import MainList from "./MainList";
 const MainModule = () => {
   return (
     <div>
-      This is the main module.
+        <h2>User Profile Information</h2>
       <MainList />
     </div>
   );
