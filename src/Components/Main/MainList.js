@@ -9,11 +9,6 @@ const MainList = () => {
     const [profile, setProfile] = useState([]);
     const [readyForRender, setReadyForRender] = useState([]);
     useEffect(() => {
-        // console.log("use effect");
-        // getAllProfiles().then((profiles) => {
-        //     console.log(profiles);
-        //     setProfiles(profiles);
-        // });
 
         // get profile info for specific id
         getById("EpFv6Ym6q9").then((profile) => {
