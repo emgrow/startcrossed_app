@@ -9,10 +9,8 @@ Parse.serverURL = Env.SERVER_URL;
 function App() {
   return (
   <div>
-    <h2>testing</h2>
-
+    <h1>testing</h1>
     <Components />
-    
   </div>);
 
 
