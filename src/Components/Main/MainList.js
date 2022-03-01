@@ -11,12 +11,12 @@ const MainList = () => {
     useEffect(() => {
 
         // get profile info for specific id
-        getById("EpFv6Ym6q9").then((profile) => {
-            console.log(profile);
-            setProfile(profile);
-            console.log(profile.get("firstName"));
-            setReadyForRender(true);
-          });
+        // getById("EpFv6Ym6q9").then((profile) => {
+        //     console.log(profile);
+        //     setProfile(profile);
+        //     console.log(profile.get("firstName"));
+        //     setReadyForRender(true);
+        //   });
     });
 
     // make sure profile info is ready to be rendered 
