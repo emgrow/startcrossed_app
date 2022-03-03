@@ -1,0 +1,65 @@
+.form-control {
+    background: transparent;
+    color:white;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.login-body {
+    display: grid;
+    padding: 30px;
+    /* margin: 20px; */
+    /* justify-content: center; */
+    max-width: 700px;
+    margin: auto;
+    border: 2px solid white;
+    color: #fff;
+  }
+  
+  .message {
+    text-align: center;
+  }
+  
+  /* Format elements */
+  
+  h1 {
+    color: #fff;
+    font-weight: 350;
+    font-size: 40px;
+    margin: 0px auto;
+    padding: 12px;
+  }
+  
+  h2 {
+    font-family: "Mukta", sans-serif;
+    color: #fff;
+    font-weight: 100;
+    font-style: italic;
+    margin: 0px auto;
+    padding: 20px;
+  }
+  
+  p {
+    color: #fff;
+  }
+  
+  a {
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  /* Change color of input text */
+  
+  .login-body .mb-3 input {
+    color: white;
+  }
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
