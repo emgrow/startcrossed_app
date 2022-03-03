@@ -1,0 +1,12 @@
+.logo {
+    padding: 7px;
+    margin: 1px;
+    font-family: "Comfortaa", sans-serif;
+}
+
+@media all and (max-width: 600px) {
+    .logo {
+      text-align: center;
+    }
+}
+  
