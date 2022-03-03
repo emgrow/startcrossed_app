@@ -10,7 +10,7 @@ export default function Home() {
         </div>
         {/* <!-- Display zodiac wheel image --> */}
         <div class="wheel">
-          <img src="../../../img/chart.svg" className="image" />
+          <img  src={require("../../img/astrology-circle.png")} />
         </div>
         {/* <!-- Add slogan --> */}
         <div class="message">

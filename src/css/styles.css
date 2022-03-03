@@ -16,7 +16,7 @@ body {
       rgba(0, 0, 0, 0) 40%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("../../img/space.jpeg");
+    url("../img/space.jpeg");
   background-size: 2100px 1300px;
 }
 
