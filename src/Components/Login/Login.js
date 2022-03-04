@@ -8,8 +8,7 @@ export default function Login() {
                 <label
                 for="passwordControlInput"
                 class="form-label"
-                >Password</label
-                >
+                >Password</label>
                 <input
                 type="password"
                 class="form-control"

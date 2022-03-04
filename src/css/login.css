@@ -7,6 +7,7 @@
     height: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
+    width:100%
 }
 
 .login-body {
@@ -62,4 +63,20 @@
 .btn:hover {
     background-color: white;
     color: black;
+}
+
+.mb-3{
+    display: block
+}
+
+.form-select {
+    color: white;
+}
+
+select option{
+    color:black;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
