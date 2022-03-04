@@ -362,7 +362,6 @@ export default function Register() {
           <option value="Zimbabwe">Zimbabwe</option>
         </select>
       </div>
-      <br />
       {/* Redirect to login */}
       <p class="message">
         Already have an account? Log in<a href="../login/login.html">here.</a>
