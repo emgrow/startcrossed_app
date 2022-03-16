@@ -25,6 +25,7 @@
     display:table-cell;
     vertical-align: middle;
     text-align: center;
+    position:relative;
   }
   
   .card-title {
@@ -43,7 +44,7 @@
   }
   
   .sign {
-    position: fixed;
+    position: relative;
     top: 15%;
   }
   

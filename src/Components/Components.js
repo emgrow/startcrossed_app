@@ -7,7 +7,7 @@ import Profile from "./Profile/Profile.js";
 
 const Components = () => {
   return (
-    <div>
+    <div id="components">
       <Profile />
     </div>
   );

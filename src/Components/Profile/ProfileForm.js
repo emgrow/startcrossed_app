@@ -1,8 +1,8 @@
 import React from "react"
 
-const ProfileForm = () => {
+const ProfileForm = ({onClick}) => {
     return (
-        <form action="getBirthday()">
+    <div>
         <div class="mb-3">
             <label for="firstName" class="form-label"
                 >First Name</label>
@@ -22,10 +22,10 @@ const ProfileForm = () => {
             type="submit"
             class="btn btn-outline-light"
             id="submit"
-            // onClick="getBirthday()"
+            onClick={onClick}
             >
             Submit</button>
-        </form>
+    </div>
     );
 };
 
