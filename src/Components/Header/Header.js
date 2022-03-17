@@ -1,6 +1,6 @@
 import "../../css/header.css";
 const Header = () => (
-    <h1 class="logo">starcrossd</h1>
+    <h1 className="logo">starcrossd</h1>
 );
 
 export default Header;

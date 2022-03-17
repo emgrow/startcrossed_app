@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../css/login.css";
 export default function Register() {
     return (
@@ -364,7 +365,7 @@ export default function Register() {
       </div>
       {/* Redirect to login */}
       <p class="message">
-        Already have an account? Log in<a href="../login/login.html">here.</a>
+        Already have an account? Log in<Link to="/login">here</Link>
       </p>
       {/* Submit Information and Redirect */}
       <button

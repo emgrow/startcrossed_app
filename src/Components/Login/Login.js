@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../css/login.css";
 export default function Login() {
     return (
@@ -16,7 +17,7 @@ export default function Login() {
                 />
             
             <p class="message">
-               Don't have an account? Click<a href="../register/register.html">here</a>to register.
+               Don't have an account? Click<Link to="/register">here</Link>to register.
             </p>
             <button
                 type="button"
