@@ -23,7 +23,15 @@ const ProfileCard = () => {
 
         if (sign) {
             document.getElementById("sign-header").innerHTML = `${sign}`;
-            document.getElementById("card-img").src = "../../img/${sign}.jpg";
+            //document.getElementById("card-img").src = "../../img/${sign}.jpg";
+            
+            var imgPath = "../../img/Cancer.jpg";
+            document.getElementById("card-img").innerHTML = `<img 
+            height="100%"
+            width="100%"
+            src="{require("${imgPath}")}"
+            />`;
+            
             if (sign === "Cancer" || (sign === "Pisces") | (sign === "Scorpio")) {
                document.getElementById("app").class = "water";
                console.log("class is: ", document.getElementById("app").class);
@@ -69,10 +77,10 @@ const ProfileCard = () => {
         return day > last_day[month - 1] ? signs[month] : signs[month - 1];
     }
     
-
     const onClickHandler = () => {
         setGetBirthday(true);
     };
+    
     return (
         <div class="body">
             <ProfileForm onClick={onClickHandler}/>
@@ -81,12 +89,8 @@ const ProfileCard = () => {
                     <h2>your sign is...</h2>
                     <h1 id="sign-header" class="sign"></h1>
                 </div>
-                <div class="card-img">
-                <img 
-                    id="card-img"
-                    height="100%"
-                    width="100%"
-                />
+                <div id="card-img">
+
                 </div>
                 <div id="card-name" class="card-name"></div>
             </div>
