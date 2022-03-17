@@ -1,16 +1,22 @@
+import { Link } from "react-router-dom";
 import "../../css/styles.css";
+import Icon from "./Icon.js";
 export default function Home() {
     return (
         <div>
         <div class="header-options">
             {/*  Navigate to login page */}
-            <a href="login/login.html">Login</a>
+            <Link to="/login">Login</Link>
             {/*  Navigate to register page  */}
-            <a href="register/register.html">Register</a>
+            <Link to="/register">Register</Link>
+
+            <Link to="/match">Match Tool</Link>
+
+            <Link to="/profile">Profile</Link>
         </div>
         {/*  Display zodiac wheel image  */}
         <div class="wheel">
-          <img  src={require("../../img/astrology-circle.png")} />
+            <Icon />
         </div>
         {/* Add slogan */}
         <div class="message">

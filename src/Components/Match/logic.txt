@@ -1,0 +1,20 @@
+CODE
+1 Fire
+2 Water
+3 Earth
+4 Air
+
+Element Calc
+if sign1.name == sign2.name (Aquarius and Aquarius)
+    Very Compatible
+elif sign1.Element == sign2.Element (Aquarius and Libra)
+    Compatible
+elif signsum == 5
+    if sign1.Quality == sign2.Quality (Aquarius and Leo)
+        Very Compatible
+    else (Aquarius and Sagittarius || Pisces and Taurus)
+        Compatible
+elif sign1.Quality == sign2.Quality (Aquarius and Scorpio)
+    Very Incompatible
+else (Aquarius and Virgo)
+    Incompatible
