@@ -21,3 +21,17 @@ export const getById = (id) => {
       return result;
     });
   };
+
+export const addSignProfile = (firstName, bday, sign) => {
+  console.log("Creating: ", firstName);
+  const Profiles = Parse.Object.extend("Profiles");
+  const profile = new Profiles();
+  // using setter to UPDATE the object
+  profile.set("firstName", firstName);
+  profile.set("birthDate", bday);
+  profile.set("sign", sign);
+  return profile.save().then((result) => {
+    // returns new Profile object
+    return result;
+  });
+};

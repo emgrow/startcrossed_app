@@ -102,3 +102,56 @@ a {
   padding: 10px;
   color: #fff;
 }
+
+
+.water {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/blue_space.jpg");
+  background-size: 2100px 1300px;
+}
+
+.fire {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/red_space.jpg");
+  background-size: 2100px 1300px;
+}
+
+.earth {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/green_space.jpg");
+  background-size: 2100px 1300px;
+}
+
+.air {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/yellow_space.jpg");
+  background-size: 2100px 1300px;
+}
