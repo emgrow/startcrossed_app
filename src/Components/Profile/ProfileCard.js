@@ -1,6 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { addSignProfile } from "../../Common/Services/ProfileService.js";
 import ProfileForm from "./ProfileForm.js";
+import Aquarius from "../../img/Aquarius.jpg";
+import Aries from "../../img/Aries.jpg";
+import Cancer from "../../img/Cancer.jpg";
+import Capricorn from "../../img/Capricorn.jpg";
+import Gemini from "../../img/Gemini.jpg";
+import Leo from "../../img/Leo.jpg";
+import Libra from "../../img/Libra.jpg";
+import Pisces from "../../img/Pisces.jpg";
+import Sagittarius from "../../img/Sagittarius.jpg";
+import Scorpio from "../../img/Scorpio.jpg";
+import Taurus from "../../img/Taurus.jpg";
+import Virgo from "../../img/Virgo.jpg";
 
 const ProfileCard = () => {
     const [getBirthday, setGetBirthday] = useState(false);
@@ -23,14 +35,19 @@ const ProfileCard = () => {
 
         if (sign) {
             document.getElementById("sign-header").innerHTML = `${sign}`;
-            //document.getElementById("card-img").src = "../../img/${sign}.jpg";
-            
-            var imgPath = "../../img/Cancer.jpg";
-            document.getElementById("card-img").innerHTML = `<img 
-            height="100%"
-            width="100%"
-            src="{require("${imgPath}")}"
-            />`;
+            var img = document.getElementById("card-img");
+            if (sign==="Aquarius") {img.src=Aquarius};
+            if (sign==="Aries") {img.src=Aries};
+            if (sign==="Cancer") {img.src=Cancer};
+            if (sign==="Capricorn") {img.src=Capricorn};
+            if (sign==="Gemini") {img.src=Gemini};
+            if (sign==="Leo") {img.src=Leo};
+            if (sign==="Libra") {img.src=Libra};
+            if (sign==="Pisces") {img.src=Pisces};
+            if (sign==="Sagittarius") {img.src=Sagittarius};
+            if (sign==="Scorpio") {img.src=Scorpio};
+            if (sign==="Taurus") {img.src=Taurus};
+            if (sign==="Virgo") {img.src=Virgo};
             
             if (sign === "Cancer" || (sign === "Pisces") | (sign === "Scorpio")) {
                document.getElementById("app").class = "water";
@@ -89,9 +106,7 @@ const ProfileCard = () => {
                     <h2>your sign is...</h2>
                     <h1 id="sign-header" class="sign"></h1>
                 </div>
-                <div id="card-img">
-
-                </div>
+                <img id="card-img" class="card-img" />
                 <div id="card-name" class="card-name"></div>
             </div>
         </div>
