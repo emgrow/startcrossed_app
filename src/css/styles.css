@@ -1,0 +1,157 @@
+* {
+  caret-color: white;
+}
+
+/* *::placeholder {
+  color: #fff;
+  opacity: 1;
+} */
+
+body {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/space.jpeg");
+  background-size: 2100px 1300px;
+  display: table;
+  width:100%;
+  padding: 5px 5px 5px 5px;
+}
+
+.header {
+  display: flex;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.header-title {
+  font-family: "Comfortaa", sans-serif;
+  margin-right: auto;
+}
+
+.header-options {
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+  padding: 20px;
+}
+
+.login-body {
+  display: grid;
+  padding: 30px;
+  /* margin: 20px; */
+  /* justify-content: center; */
+  max-width: 700px;
+  margin: auto;
+  border: 2px solid white;
+  color: #fff;
+}
+
+.input-box {
+  background: transparent;
+}
+
+.message {
+  text-align: center;
+}
+
+.wheel {
+  /* width: 680px;
+  height: 680px; */
+  /* overflow: hidden; */
+  text-align: center;
+}
+
+.wheel img {
+  /* stroke: transparent;
+  stroke-width: 0px; */
+  width: 700px;
+  height: 700px;
+
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(151deg)
+    brightness(107%) contrast(102%);
+}
+
+h1 {
+  color: #fff;
+  font-weight: 350;
+  font-size: 40px;
+  margin: auto;
+  padding: 12px;
+}
+
+h2 {
+  font-family: "Mukta", sans-serif;
+  color: #fff;
+  font-weight: 100;
+  font-style: italic;
+  margin: auto;
+  padding: 20px;
+}
+
+p {
+  color: #fff;
+}
+
+a {
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+}
+
+
+.water {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/blue_space.jpg");
+  background-size: 2100px 1300px;
+}
+
+.fire {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/red_space.jpg");
+  background-size: 2100px 1300px;
+}
+
+.earth {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/green_space.jpg");
+  background-size: 2100px 1300px;
+}
+
+.air {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/yellow_space.jpg");
+  background-size: 2100px 1300px;
+}
