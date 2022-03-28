@@ -15,8 +15,10 @@ const Register = ({ user, onChange, onSubmit }) => {
           type="text"
           class="form-control"
           id="firstName"
+          name="firstName"
           value={user.firstName}
           onChange={onChange}
+          required
         />
       </div>
       <div class="mb-3">
@@ -25,8 +27,10 @@ const Register = ({ user, onChange, onSubmit }) => {
           type="text"
           class="form-control"
           id="lastName"
+          name="lastName"
           value={user.lastName}
           onChange={onChange}
+          required
         />
       </div>
       {/* Email Register */}
@@ -37,8 +41,10 @@ const Register = ({ user, onChange, onSubmit }) => {
           type="email"
           class="form-control"
           id="emailRegister"
+          name="email"
           value={user.email}
           onChange={onChange}
+          required
         />
       </div>
       {/* Password Register */}
@@ -49,12 +55,14 @@ const Register = ({ user, onChange, onSubmit }) => {
           type="password"
           class="form-control"
           id="passwordRegister"
+          name="password"
           value={user.password}
           onChange={onChange}
+          required
         />
       </div>
       {/* Confirm Password */}
-      <div class="mb-3">
+      {/* <div class="mb-3">
         <label for="passwordConfirm" class="form-label"
           >Confirm Password</label>
         <input
@@ -62,7 +70,7 @@ const Register = ({ user, onChange, onSubmit }) => {
           class="form-control"
           id="passwordConfirm"
         />
-      </div>
+      </div> */}
       {/* Birth data to send to Astrology API */}
       <div class="mb-3">
         <label for="birthDay" class="form-label"
@@ -71,8 +79,8 @@ const Register = ({ user, onChange, onSubmit }) => {
           type="date"
           class="form-control"
           id="birthDay"
-          value={user.birthDay}
-          onChange={onChange}
+          // value={user.birthDay}
+          // onChange={onChange}
         />
       </div>
       <div class="mb-3">
@@ -82,8 +90,8 @@ const Register = ({ user, onChange, onSubmit }) => {
           type="time"
           class="form-control"
           id="birthTime"
-          value={user.birthTime}
-          onChange={onChange}
+          // value={user.birthTime}
+          // onChange={onChange}
         />
       </div>
       <div class="mb-3">
@@ -99,8 +107,8 @@ const Register = ({ user, onChange, onSubmit }) => {
             aria-describedby="basic-addon1"
             class="form-control"
             id="birthCity"
-            value={user.birthCity}
-            onChange={onChange}
+            // value={user.birthCity}
+            // onChange={onChange}
           />
         </div>
         <div class="input-group mb-3">
@@ -113,8 +121,8 @@ const Register = ({ user, onChange, onSubmit }) => {
             aria-describedby="basic-addon2"
             class="form-control"
             id="birthState"
-            value={user.birthState}
-            onChange={onChange}
+            // value={user.birthState}
+            // onChange={onChange}
           />
         </div>
         {/* Copy Country Options for Select */}
@@ -122,8 +130,8 @@ const Register = ({ user, onChange, onSubmit }) => {
           class="form-select form-control"
           id="country"
           name="country"
-          value={user.country}
-          onChange={onChange}
+          // value={user.country}
+          // onChange={onChange}
         >
           <option value="" disabled selected>Country/Region</option>
           <option value="Afganistan">Afghanistan</option>
@@ -388,10 +396,11 @@ const Register = ({ user, onChange, onSubmit }) => {
       </p>
       {/* Submit Information and Redirect */}
       <button
-        type="button"
+        type="submit"
         class="btn btn-outline-light form-control"
-        onclick="location.href='../src/main.html'"
-        onblur="getForm()"
+        // onclick="location.href='../src/main.html'"
+        // onblur="getForm()"
+        onSubmit={onSubmit}
         id="submit"
       >
         Submit

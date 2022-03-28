@@ -6,8 +6,8 @@ const Login = ({ user, onChange, onSubmit }) => {
         <div class="login-body">
             <form onSubmit={onSubmit} autoComplete="off">
             <label for="emailControlInput" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="emailControlInput" value={user.email}
-                onChange={onChange} required />
+            <input type="email" className="form-control" id="emailControlInput" value={user.email}
+                onChange={onChange} name="email" required />
             {/* password */}
                 <label
                 for="passwordControlInput"
@@ -19,6 +19,7 @@ const Login = ({ user, onChange, onSubmit }) => {
                 onChange={onChange}
                 class="form-control"
                 id="passwordControlInput"
+                name="password"
                 required
                 />
             
@@ -26,9 +27,9 @@ const Login = ({ user, onChange, onSubmit }) => {
                Don't have an account? Click<Link to="/register">here</Link>to register.
             </p>
             <button
-                type="button"
+                type="submit"
                 class="btn btn-outline-light form-control"
-                onclick="location.href='../src/main.html'">
+                onSubmit={onSubmit}>
                 Login
             </button>
             </form>
