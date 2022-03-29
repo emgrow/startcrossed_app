@@ -1,28 +1,34 @@
 import React from "react";
 import MainModule from "./Main/Main.js";
 import Home from "./Home/Home.js";
-import Login from "./Login/Login.js"
-import Register from "./Register/Register.js"
+import AuthLogin from "./Auth/AuthLogin.js"
+import AuthRegister from "./Auth/AuthRegister.js"
 import Match from "./Match/Match.js"
 import Profile from "./Profile/Profile.js";
+import MainHome from "./Main/MainHome.js"
+import MainGood from "./Main/MainGood.js"
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
-  Navigate
+  Redirect,
+  Switch
 } from "react-router-dom";
 
 const Components = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/register" element={<Register/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/match" element={<Match/>} />
-        <Route path="/profile" element={<Profile/>} />
-        <Route path="/MainModule" component={<MainModule/>} />
-      </Routes>
+      <Switch>
+        <Route path="/welcome" component={Home} />
+        <Route path="/good" component={MainGood} />
+        <Route path="/home" component={MainHome} />
+        <Route path="/register" component={AuthRegister} />
+        <Route path="/login" component={AuthLogin} />
+        <Route path="/match" component={Match} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/MainModule" component={MainModule} />
+        <Redirect to="/welcome" />
+      </Switch>
+
       {/* <Navigate to="/welcome" /> */}
     </Router>
   );

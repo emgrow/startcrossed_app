@@ -1,8 +1,10 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import "../../css/login.css";
-export default function Register() {
+const Register = ({ user, onChange, onSubmit }) => {
     return (
         <div class="login-body">
+        <form onSubmit={onSubmit} autoComplete="off">
     {/* Register Information */}
     <div class="register-body">
       <div class="mb-3">
@@ -13,6 +15,10 @@ export default function Register() {
           type="text"
           class="form-control"
           id="firstName"
+          name="firstName"
+          value={user.firstName}
+          onChange={onChange}
+          required
         />
       </div>
       <div class="mb-3">
@@ -21,6 +27,10 @@ export default function Register() {
           type="text"
           class="form-control"
           id="lastName"
+          name="lastName"
+          value={user.lastName}
+          onChange={onChange}
+          required
         />
       </div>
       {/* Email Register */}
@@ -31,6 +41,10 @@ export default function Register() {
           type="email"
           class="form-control"
           id="emailRegister"
+          name="email"
+          value={user.email}
+          onChange={onChange}
+          required
         />
       </div>
       {/* Password Register */}
@@ -41,11 +55,14 @@ export default function Register() {
           type="password"
           class="form-control"
           id="passwordRegister"
-
+          name="password"
+          value={user.password}
+          onChange={onChange}
+          required
         />
       </div>
       {/* Confirm Password */}
-      <div class="mb-3">
+      {/* <div class="mb-3">
         <label for="passwordConfirm" class="form-label"
           >Confirm Password</label>
         <input
@@ -53,7 +70,7 @@ export default function Register() {
           class="form-control"
           id="passwordConfirm"
         />
-      </div>
+      </div> */}
       {/* Birth data to send to Astrology API */}
       <div class="mb-3">
         <label for="birthDay" class="form-label"
@@ -62,6 +79,8 @@ export default function Register() {
           type="date"
           class="form-control"
           id="birthDay"
+          // value={user.birthDay}
+          // onChange={onChange}
         />
       </div>
       <div class="mb-3">
@@ -71,6 +90,8 @@ export default function Register() {
           type="time"
           class="form-control"
           id="birthTime"
+          // value={user.birthTime}
+          // onChange={onChange}
         />
       </div>
       <div class="mb-3">
@@ -86,6 +107,8 @@ export default function Register() {
             aria-describedby="basic-addon1"
             class="form-control"
             id="birthCity"
+            // value={user.birthCity}
+            // onChange={onChange}
           />
         </div>
         <div class="input-group mb-3">
@@ -98,6 +121,8 @@ export default function Register() {
             aria-describedby="basic-addon2"
             class="form-control"
             id="birthState"
+            // value={user.birthState}
+            // onChange={onChange}
           />
         </div>
         {/* Copy Country Options for Select */}
@@ -105,6 +130,8 @@ export default function Register() {
           class="form-select form-control"
           id="country"
           name="country"
+          // value={user.country}
+          // onChange={onChange}
         >
           <option value="" disabled selected>Country/Region</option>
           <option value="Afganistan">Afghanistan</option>
@@ -369,16 +396,19 @@ export default function Register() {
       </p>
       {/* Submit Information and Redirect */}
       <button
-        type="button"
+        type="submit"
         class="btn btn-outline-light form-control"
-        onclick="location.href='../src/main.html'"
-        onblur="getForm()"
+        // onclick="location.href='../src/main.html'"
+        // onblur="getForm()"
+        onSubmit={onSubmit}
         id="submit"
       >
         Submit
       </button>
     </div>
-            
+        </form>
         </div>
     );
 }
+
+export default Register;

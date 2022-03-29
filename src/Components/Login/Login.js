@@ -1,10 +1,13 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import "../../css/login.css";
-export default function Login() {
+const Login = ({ user, onChange, onSubmit }) => {
     return (
         <div class="login-body">
+            <form onSubmit={onSubmit} autoComplete="off">
             <label for="emailControlInput" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="emailControlInput"  />
+            <input type="email" className="form-control" id="emailControlInput" value={user.email}
+                onChange={onChange} name="email" required />
             {/* password */}
                 <label
                 for="passwordControlInput"
@@ -12,20 +15,26 @@ export default function Login() {
                 >Password</label>
                 <input
                 type="password"
+                value={user.password}
+                onChange={onChange}
                 class="form-control"
                 id="passwordControlInput"
+                name="password"
+                required
                 />
             
             <p class="message">
                Don't have an account? Click<Link to="/register">here</Link>to register.
             </p>
             <button
-                type="button"
+                type="submit"
                 class="btn btn-outline-light form-control"
-                onclick="location.href='../src/main.html'">
+                onSubmit={onSubmit}>
                 Login
             </button>
-            
+            </form>
         </div>
     );
 }
+
+export default Login;

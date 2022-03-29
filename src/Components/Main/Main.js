@@ -1,12 +1,16 @@
 import React from "react";
-import MainList from "./MainList";
-
-/* MAIN MODULE WITH STATEFUL PARENT AND STATELESS CHILD */
+import { useHistory } from "react-router-dom";
 const MainModule = () => {
+  const history = useHistory();
+
+  const buttonHandler = () => {
+    history.push("/home");
+  };
+
   return (
     <div>
-        <h2>User Profile Information</h2>
-      <MainList />
+      <input type="checkbox" id="flagBox" />
+      <button onClick={buttonHandler}>HOME</button>
     </div>
   );
 };
