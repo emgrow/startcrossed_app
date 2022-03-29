@@ -28,6 +28,7 @@ const Components = () => {
         <Route path="/MainModule" component={MainModule} />
         <Redirect to="/welcome" />
       </Switch>
+
       {/* <Navigate to="/welcome" /> */}
     </Router>
   );
