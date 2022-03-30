@@ -1,7 +1,12 @@
 import React from "react";
+import Parse from "parse";
 import { Link } from "react-router-dom";
 import "../../css/login.css";
 const Register = ({ user, onChange, onSubmit }) => {
+  if(Parse.User.current()){
+    console.log(Parse.User.current().get("firstName"));
+    Parse.User.logOut();
+  }
     return (
         <div class="login-body">
         <form onSubmit={onSubmit} autoComplete="off">
@@ -73,12 +78,15 @@ const Register = ({ user, onChange, onSubmit }) => {
       </div> */}
       {/* Birth data to send to Astrology API */}
       <div class="mb-3">
-        <label for="birthDay" class="form-label"
+        <label for="birthday" class="form-label"
           >Birthday</label>
         <input
           type="date"
           class="form-control"
-          id="birthDay"
+          id="birthday" name="birthday"
+          value={user.birthday}
+          onChange={onChange}
+
           // value={user.birthDay}
           // onChange={onChange}
         />

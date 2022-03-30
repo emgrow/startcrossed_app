@@ -19,7 +19,7 @@ const Components = () => {
     <Router>
       <Switch>
         <Route path="/welcome" component={Home} />
-        <Route path="/good" component={MainGood} />
+        {/* <Route path="/good" component={MainGood} /> */}
         <Route path="/home" component={MainHome} />
         <Route path="/register" component={AuthRegister} />
         <Route path="/login" component={AuthLogin} />

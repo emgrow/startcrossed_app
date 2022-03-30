@@ -1,7 +1,12 @@
 import React from "react";
+import Parse from "parse";
 import { Link } from "react-router-dom";
 import "../../css/login.css";
 const Login = ({ user, onChange, onSubmit }) => {
+    if(Parse.User.current()){
+        console.log(Parse.User.current().get("firstName"));
+        Parse.User.logOut();
+    }
     return (
         <div class="login-body">
             <form onSubmit={onSubmit} autoComplete="off">

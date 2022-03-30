@@ -8,7 +8,8 @@ const AuthRegister = () => {
     firstName: "",
     lastName: "",
     email: "",
-    password: ""
+    password: "",
+    birthday: ""
   });
 
   const history = useHistory();
