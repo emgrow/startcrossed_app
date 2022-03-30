@@ -12,7 +12,7 @@ export default function Home() {
 
             <Link to="/match">Match Tool</Link>
 
-            <Link to="/profile">Profile</Link>
+            {/* <Link to="/profile">Profile</Link> */}
         </div>
         {/*  Display zodiac wheel image  */}
         <div className="wheel">

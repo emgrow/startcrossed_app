@@ -3,8 +3,8 @@ import React from "react"
 const ProfileForm = ({onClick}) => {
     return (
     <div>
-        <div class="mb-3">
-            <label for="firstName" class="form-label"
+        {/* <div class="mb-3"> */}
+            {/* <label for="firstName" class="form-label"
                 >First Name</label>
             <input
                 type="text"
@@ -24,7 +24,7 @@ const ProfileForm = ({onClick}) => {
             id="submit"
             onClick={onClick}
             >
-            Submit</button>
+            Submit</button> */}
     </div>
     );
 };
