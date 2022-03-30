@@ -12,10 +12,15 @@ const MainHome = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.state.user.authenticated()) {
+    // if (location.state.user.authenticated()) {
+    //   console.log("GOOD");
+    //   setFlag(true);
+    // }
+    if(Parse.User.current()){
       console.log("GOOD");
       setFlag(true);
-    } else {
+    }
+    else {
       console.log("BAD");
       setFlag(false);
     }
