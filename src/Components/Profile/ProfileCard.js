@@ -16,41 +16,6 @@ import Taurus from "../../img/Taurus.jpg";
 import Virgo from "../../img/Virgo.jpg";
 
 const ProfileCard = () => {
-    // const [getBirthday, setGetBirthday] = useState(false);
-
-    // if(getBirthday){
-    //     console.log("getting sign from birthday...");
-    //     setGetBirthday(false);
-
-    //     var firstName = document.getElementById("firstName").value;
-    //     var bday = document.getElementById("birthDay").value;
-
-    //     var date = bday.split("-");
-    //     console.log("bday: ", bday);
-    //     console.log("name: ", firstName);
-    //     console.log("date[0] ", date[0]);
-    //     // currently having a problem where zodiac returns Pisces for chis when it shouldn't be
-    //     // so something is off in the organization of the JSON with the lists
-    //     var sign = zodiac(parseInt(date[2], 10), parseInt(date[1], 10));
-    //     console.log("sign: ", sign);
-
-    //     if (sign) {
-    //         document.getElementById("sign-header").innerHTML = `${sign}`;
-    //         var img = document.getElementById("card-img");
-    //         
-        
-    //     //   document.getElementById("card-name").innerHTML = `
-    //     //   <h2>${firstName}</h2>
-    //     //   `;
-    //       // PARSE MODEL 1
-    //       // write sign and birthday info back to Parse
-    //       addSignProfile(firstName, bday, sign);
-
-    // }
-    
-    // const onClickHandler = () => {
-    //     setGetBirthday(true);
-    // };
 
      function zodiac(day, month){
         var signs = [
@@ -101,14 +66,14 @@ const ProfileCard = () => {
     return (
         <div class="body">
             {/* <ProfileForm onClick={onClickHandler}/> */}
-            <div id="card" class="card ">
-                <div id="card-title" class="card-title">
+            <div id="card" className="card ">
+                <div id="card-title" className="card-title">
                     <h2>your sign is...</h2>
                     
-                    <h1 id="sign-header" class="sign">{sign}</h1>
+                    <h1 id="sign-header" className="sign">{sign}</h1>
                 </div>
                 
-                <img id="card-img" class="card-img" src={src}/>
+                <img id="card-img" className="card-img" src={src}/>
                 {/* <div id="card-name" class="card-name"></div> */}
             </div>
         </div>

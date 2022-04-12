@@ -1,0 +1,38 @@
+.search-page{
+    color: white;
+}
+
+.profile-card{
+    color: #fff;
+    opacity: 0.6;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    height: 300px;
+    width: 200px;
+    text-align: center;
+    display: table;
+    margin: auto;
+}
+
+.profile-card:hover{
+    width: 500;
+    height: 400;
+}
+
+.image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.search-btn {
+    color: #fff;
+    opacity: 0.6;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background-color: black;
+}

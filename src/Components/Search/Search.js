@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ProtectedRoute from "../../Common/AppTools/ProtectedRoute";
-import MainGood from "./MainGood";
+import SearchGood from "./SearchGood";
 import Parse from "parse";
 import { useLocation } from "react-router-dom";
 
-const MainHome = () => {
+const Search = () => {
   // TODO: change the way that the flag gets set so it is based on
   // authentication instead of the checkbox
   const [flag, setFlag] = useState(false);
-
 
   useEffect(() => {
     if(Parse.User.current()){
@@ -27,9 +26,9 @@ const MainHome = () => {
   return (
     <div>
       {/* change what the ProtectedRoute takes you to */}
-      <ProtectedRoute exact flag={flag} component={MainGood} />
+      <ProtectedRoute exact flag={flag} component={SearchGood} />
     </div>
   );
 };
 
-export default MainHome;
+export default Search;

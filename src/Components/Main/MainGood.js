@@ -25,6 +25,10 @@ const MainGood = () => {
       <Link to="/match">Match Tool</Link>
       </h3>
 
+      <h3 className="profile-body">search through signs to view fellow user profiles and see if  your stars cross!
+      <Link to="/search">Search Tool</Link>
+      </h3>
+
       <button className="btn-outline-light">
         <Link to="/main">Go back.</Link>
       </button>

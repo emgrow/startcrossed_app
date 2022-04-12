@@ -13,6 +13,7 @@ import {
   Redirect,
   Switch
 } from "react-router-dom";
+import Search from "./Search/Search.js";
 
 const Components = () => {
   return (
@@ -26,6 +27,7 @@ const Components = () => {
         <Route path="/match" component={Match} />
         <Route path="/profile" component={Profile} />
         <Route path="/MainModule" component={MainModule} />
+        <Route path="/search" component={Search} />
         <Redirect to="/welcome" />
       </Switch>
 
