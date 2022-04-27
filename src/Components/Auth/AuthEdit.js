@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { createUser } from "../../Common/Services/AuthService.js";
-import Register from "../Register/Register.js";
+import { submitInfo } from "../../Common/Services/EditService.js";
+import Edit from "../Edit/Edit.js";
 import { useHistory } from "react-router-dom";
 
 const AuthRegister = () => {
-  const [newUser, setNewUser] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: ""
+  const [currUser, setCurrUser] = useState({
+    file: "",
+    bio: ""
   });
 
   const history = useHistory();
@@ -20,13 +18,13 @@ const AuthRegister = () => {
 
   // useEffect that run when changes are made to the state variable flags
   useEffect(() => {
-    if (newUser && add) {
-      createUser(newUser).then((userCreated) => {
-        if (userCreated) {
-          alert(
-            `${userCreated.get("firstName")}, you successfully registered!`
-          );
-        }
+    if (currUser && add) {
+      submitInfo(currUser).then(() => {
+        // if (userCreated) {
+        //   alert(
+        //     `${userCreated.get("firstName")}, you successfully registered!`
+        //   );
+        // }
         // TODO: redirect user to main app
         setAdd(false);
         history.push("/edit");
@@ -37,12 +35,12 @@ const AuthRegister = () => {
   const onChangeHandler = (e) => {
     e.preventDefault();
     console.log(e.target);
-    const { name, value: newValue } = e.target;
-    console.log(newValue);
+    const { name, value: currValue } = e.target;
+    console.log(curValue);
 
-    setNewUser({
-      ...newUser,
-      [name]: newValue
+    setCurrUser({
+      ...currUser,
+      [name]: currValue
     });
   };
 
@@ -54,7 +52,7 @@ const AuthRegister = () => {
 
   return (
     <div>
-      <Register
+      <Edit
         user={newUser}
         onChange={onChangeHandler}
         onSubmit={onSubmitHandler}

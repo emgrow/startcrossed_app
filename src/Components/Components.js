@@ -1,12 +1,13 @@
 import React from "react";
 import MainModule from "./Main/Main.js";
 import Home from "./Home/Home.js";
-import AuthLogin from "./Auth/AuthLogin.js"
-import AuthRegister from "./Auth/AuthRegister.js"
-import Match from "./Match/Match.js"
+import AuthLogin from "./Auth/AuthLogin.js";
+import AuthRegister from "./Auth/AuthRegister.js";
+import Match from "./Match/Match.js";
 import Profile from "./Profile/Profile.js";
-import MainHome from "./Main/MainHome.js"
-import MainGood from "./Main/MainGood.js"
+import MainHome from "./Main/MainHome.js";
+import MainGood from "./Main/MainGood.js";
+import Edit from "./Edit/Edit.js";
 import {
   BrowserRouter as Router,
   Route,
@@ -26,6 +27,7 @@ const Components = () => {
         <Route path="/match" component={Match} />
         <Route path="/profile" component={Profile} />
         <Route path="/MainModule" component={MainModule} />
+        <Route path="/edit" component={Edit} />
         <Redirect to="/welcome" />
       </Switch>
 
