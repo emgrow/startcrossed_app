@@ -16,7 +16,7 @@ const ProtectedRoute = ({ component: Component, flag }) => {
   return (
     <div>
       {flag ? (
-        <Redirect to="/good" />
+        <Component/>
       ) : (
         <div>
           <p>Unauthorized!</p> <button onClick={goBackHandler}>Go back.</button>

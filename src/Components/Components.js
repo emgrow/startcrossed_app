@@ -14,13 +14,15 @@ import {
   Redirect,
   Switch
 } from "react-router-dom";
+import Search from "./Search/Search.js";
+import Chat from "./Chat/Chat.js";
 
 const Components = () => {
   return (
     <Router>
       <Switch>
         <Route path="/welcome" component={Home} />
-        <Route path="/good" component={MainGood} />
+        {/* <Route path="/good" component={MainGood} /> */}
         <Route path="/home" component={MainHome} />
         <Route path="/register" component={AuthRegister} />
         <Route path="/login" component={AuthLogin} />
@@ -28,9 +30,10 @@ const Components = () => {
         <Route path="/profile" component={Profile} />
         <Route path="/MainModule" component={MainModule} />
         <Route path="/edit" component={Edit} />
+        <Route path="/search" component={Search} />
+        <Route path="/chat" component={Chat} />
         <Redirect to="/welcome" />
       </Switch>
-
       {/* <Navigate to="/welcome" /> */}
     </Router>
   );

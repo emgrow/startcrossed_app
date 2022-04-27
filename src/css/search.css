@@ -1,0 +1,90 @@
+.search-page{
+    color: white;
+}
+
+.profile-card{
+    color: #fff;
+    opacity: 0.6;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    height: 300px;
+    width: 200px;
+    text-align: center;
+    display: table;
+    margin: auto;
+
+
+}
+
+.profile-card:hover{
+    width: 500;
+    height: 400;
+}
+
+.image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.search-btn {
+    color: #fff;
+    opacity: 0.6;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background-color: black;
+}
+
+.view-profiles {
+    border-color: white;
+    border-width: 2px;
+    /* padding: 5px 5px 25px 40px; */
+    /*css grid styles*/
+    display: grid;
+    /*define auto row size*/
+    grid-auto-rows: 450px;
+    /*define columns*/
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    grid-gap: 5px;
+    width: 90%;
+    margin: auto;
+}
+
+.grid-tile{
+    background-color: rgb(0,0,0,0.6);
+    color: #fff;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    width: 350px;
+    height: 420px;
+    text-align: center;
+    display: table-cell;
+    margin:auto;
+    padding: 5px;
+}
+
+
+.search-wrapper{
+    padding: 5px 5px 5px 5px;
+    display: table-cell;
+}
+
+.not-clicked{
+    color: rgb(255,255,255);
+    font-size: 24px;
+}
+
+.clicked {
+    color: rgb(255,255,255) !important;
+    font-size: 24px;
+}
+
+.profile-img {
+    width: 150px;
+}

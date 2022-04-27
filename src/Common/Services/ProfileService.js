@@ -3,11 +3,11 @@ import { Profiler } from "react";
 
 // READ operation - get all profiles in Parse class Profiles
 export const getAllProfiles = () => {
-    const Profile = Parse.Object.extend("Profiles");
-    const query = new Parse.Query(Profile);
+    const User = Parse.Object.extend("User");
+    const query = new Parse.Query(User);
     console.log("query: ", query);
     return query.find().then((results) => {
-      // returns array of Profile objects
+      // returns array of User objects
       return results;
     });
   };
@@ -21,6 +21,18 @@ export const getById = (id) => {
       return result;
     });
   };
+
+export const getUserByEmail = (email) => {
+
+  const User = Parse.Object.extend("User");
+  const query = new Parse.Query(User);
+  
+  return query.get(email).then((result) => {
+    // return User object with email: email
+    
+    return result;
+  });
+};
 
 export const addSignProfile = (firstName, bday, sign) => {
   console.log("Creating: ", firstName);
