@@ -1,3 +1,7 @@
+* {
+    caret-color: black !important;
+    
+}
 .chat-wrapper{
     width: 100%;
     min-height: 700px;
@@ -10,6 +14,7 @@
       Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
       Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     letter-spacing: 0.5px;
+    color: black!important;
   }
   
   .ce-chat-list {
@@ -182,6 +187,7 @@
     padding: 0px 18px;
     outline: none;
     font-size: 15px;
+    color: black !important;
   }
   
   .image-button {
