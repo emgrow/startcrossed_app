@@ -16,7 +16,6 @@ import Taurus from "../../img/Taurus.jpg";
 import Virgo from "../../img/Virgo.jpg";
 
 const ProfileCard = () => {
-
      function zodiac(day, month){
         var signs = [
             "Capricorn",
