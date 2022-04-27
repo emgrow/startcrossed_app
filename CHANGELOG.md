@@ -1,6 +1,27 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] - 2022-04-27
+ 
+This update includes new functionality and routing to accompany the new features, based off of user stories.
+
+### Added
+- chat engine
+- search tool
+- matching service
+- edit option with image and bio
+- places API
+
+### Changed
+- component routing
+
+### Fixed
+- continued to maintain styling
+- calculates zodiac sign after registrationg
+
+### Additional Notes
+- google places API could not work. requires billing information and extra authorization that we could not provide.
+
 ## [0.3.0] - 2022-03-30
  
 Here we update the app to work with Parse and use React's Routing capabilities to build out 2 models.
