@@ -52,7 +52,7 @@ const SearchGood = () => {
             <div className="search-wrapper">
                 <h3>The profiles below represent users you are astrologically compatible with! Profiles with<i id="icon" className="fas fa-star clicked"></i> icons are users you are starcrossd with!</h3>
                 <br />
-                <h3>To add users to your stars list enter their name in the box below. If they star your profile as well, your stars will cross!</h3>
+                <h3>To add users to your stars list enter their username (email) in the box below. If they star your profile as well, your stars will cross!</h3>
                 <input 
                     type="text"
                     id="username"
