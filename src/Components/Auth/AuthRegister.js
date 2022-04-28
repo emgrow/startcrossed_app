@@ -28,11 +28,11 @@ const AuthRegister = () => {
     if (newUser && add) {
       // get sign, element, and quality from birthday info
       newUser.sign = zodiac(newUser.birthday);
-      alert(newUser.sign);
+
       newUser.element = element(newUser.sign);
-      alert( newUser.element);
+
       newUser.quality = quality(newUser.sign);
-      alert(newUser.quality);
+
       createUser(newUser).then((userCreated) => {
         if (userCreated) {
           alert(
