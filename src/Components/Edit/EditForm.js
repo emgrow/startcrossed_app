@@ -1,8 +1,19 @@
 import axios from 'axios';
 
 import React, {Component} from 'react';
+import { useHistory } from "react-router-dom";
+
+import {
+	BrowserRouter as Router,
+	Route,
+	Redirect,
+	Link,
+	Switch
+  } from "react-router-dom";
 
 class EditForm extends Component {
+
+	// history = useHistory();
 
 	state = {
 
@@ -17,6 +28,12 @@ class EditForm extends Component {
 	this.setState({ selectedFile: URL.createObjectURL(event.target.files[0]) });
 	
 	};
+
+	onSubmit = () => {
+		// history.push("/search");
+		<Redirect to="/search" />
+
+	}
 	
 	// On file upload (click the upload button)
 	onFileUpload = () => {
@@ -79,6 +96,7 @@ class EditForm extends Component {
 				Write a short bio for people to see here:
 
             <textarea id="bio" name="bio" maxLength="300" rows="4" cols="50"></textarea>
+			<Link to="/login">
 			<button
         type="submit"
         class="btn btn-outline-light form-control"
@@ -89,6 +107,7 @@ class EditForm extends Component {
       >
         Submit
       </button>
+	  </Link>
 		
 				{/* <img src={this.state.file}/> */}
 			</div>
