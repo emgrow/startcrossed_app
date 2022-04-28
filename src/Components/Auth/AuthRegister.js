@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createUser } from "../../Common/Services/AuthService.js";
 import Register from "../Register/Register.js";
 import { useHistory } from "react-router-dom";
+import { zodiac, quality, element } from "../../Common/AppTools/AstrologyTools.js";
 
 const AuthRegister = () => {
   const [newUser, setNewUser] = useState({
@@ -9,7 +10,10 @@ const AuthRegister = () => {
     lastName: "",
     email: "",
     password: "",
-    birthday: ""
+    birthday: "",
+    sign: "",
+    element: "",
+    quality: ""
   });
 
   const history = useHistory();
@@ -22,6 +26,13 @@ const AuthRegister = () => {
   // useEffect that run when changes are made to the state variable flags
   useEffect(() => {
     if (newUser && add) {
+      // get sign, element, and quality from birthday info
+      newUser.sign = zodiac(newUser.birthday);
+      alert(newUser.sign);
+      newUser.element = element(newUser.sign);
+      alert( newUser.element);
+      newUser.quality = quality(newUser.sign);
+      alert(newUser.quality);
       createUser(newUser).then((userCreated) => {
         if (userCreated) {
           alert(

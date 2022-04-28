@@ -10,6 +10,10 @@ export const createUser = (newUser) => {
   user.set("password", newUser.password);
   user.set("email", newUser.email);
   user.set("birthday", newUser.birthday);
+  user.set("sign", newUser.sign);
+  user.set("element", newUser.element);
+  user.set("quality", newUser.quality);
+
 
 
   console.log("User: ", user);
